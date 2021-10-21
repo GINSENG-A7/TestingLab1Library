@@ -22,7 +22,7 @@ namespace TestingLab1Library
         [Test]
         public void RectangleTestNo_2()
         {
-            Assert.AreEqual(48, myRect.Perimeter());
+            Assert.AreEqual(34, myRect.Perimeter());
         }
         [Test]
         public void RectangleTestNo_3()
@@ -45,6 +45,16 @@ namespace TestingLab1Library
         {
             Assert.IsNotNull(myTriangle);  //not valid
         }
+        [Test]
+        public void TriangleTestNo_4()
+        {
+            Assert.AreEqual(18, myTriangle.Perimeter());
+        }
+        [Test]
+        public void TriangleTestNo_5()
+        {
+            Assert.AreEqual(15.588457268119894, myTriangle.Surface());
+        }
 
         [Test]
         public void CircleTestNo_1()
@@ -60,6 +70,16 @@ namespace TestingLab1Library
         public void CircleTestNo_3()
         {
             Assert.IsTrue(myCircle.Surface() > myCircle.Perimeter());
+        }
+        [Test]
+        public void CircleTestNo_4()
+        {
+            Assert.AreEqual(50.26548245743669, myCircle.Surface());
+        }
+        [Test]
+        public void CircleTestNo_5()
+        {
+            Assert.AreEqual(25.132741228718345, myCircle.Perimeter());
         }
     }
 }

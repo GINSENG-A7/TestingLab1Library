@@ -28,7 +28,7 @@ namespace TestingLab1Library
         }
         public override double Perimeter()
         {
-            double p = 2 * width + 2 * height * 2;
+            double p = 2 * width + 2 * height;
             return p;
         }
     }
