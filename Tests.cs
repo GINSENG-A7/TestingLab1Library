@@ -36,6 +36,11 @@ namespace TestingLab1Library
             Assert.Throws<Exception>(() => new Rectangle(-1, -1)); //not valid
         }
         [Test]
+        public void RectangleTestNo_5()
+        {
+            Assert.Throws<Exception>(() => new Rectangle(Double.PositiveInfinity, Double.PositiveInfinity)); //not valid
+        }
+        [Test]
         public void TriangleTestNo_1()
         {
             Assert.IsNotNull(myTriangle.Surface());
@@ -64,6 +69,11 @@ namespace TestingLab1Library
         public void TriangleTestNo_6()
         {
             Assert.Throws<Exception>(() => new EquilateralTriangle(-1)); //not valid
+        }
+        [Test]
+        public void TriangleTestNo_7()
+        {
+            Assert.Throws<Exception>(() => new EquilateralTriangle(Double.PositiveInfinity)); //not valid
         }
 
         [Test]
@@ -95,6 +105,11 @@ namespace TestingLab1Library
         public void CircleTestNo_6()
         {
             Assert.Throws<Exception>(() => new Circle(-1)); //not valid
+        }
+        [Test]
+        public void CircleTestNo_7()
+        {
+            Assert.Throws<Exception>(() => new Circle(Double.PositiveInfinity)); //not valid
         }
     }
 }

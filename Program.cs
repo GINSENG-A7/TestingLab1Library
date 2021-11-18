@@ -10,11 +10,11 @@ namespace TestingLab1Library
     }
     public class Rectangle : Figure
     {
-        int width;
-        int height;
-        public Rectangle(int height, int width)
+        double width;
+        double height;
+        public Rectangle(double height, double width)
         {
-            if (height > 0 && width > 0 && height < Int32.MaxValue && width < Int32.MaxValue)
+            if (height > 0 && width > 0 && height < Double.PositiveInfinity && width < Double.PositiveInfinity)
             {
                 this.width = width;
                 this.height = height;
@@ -41,14 +41,14 @@ namespace TestingLab1Library
     }
     public class EquilateralTriangle : Figure
     {
-        int length;
+        double length;
         public override string getName()
         {
             return "Равносторонний треугольник";
         }
-        public EquilateralTriangle(int length)
+        public EquilateralTriangle(double length)
         {
-            if (length > 0 && length < Int32.MaxValue)
+            if (length > 0 && length < Double.PositiveInfinity)
             {
                 this.length = length;
             }
@@ -70,10 +70,10 @@ namespace TestingLab1Library
     }
     public class Circle : Figure
     {
-        int radius;
-        public Circle(int radius)
+        double radius;
+        public Circle(double radius)
         {
-            if (radius > 0 && radius < Int32.MaxValue)
+            if (radius > 0 && radius < Double.PositiveInfinity)
             {
                 this.radius = radius;
             }
