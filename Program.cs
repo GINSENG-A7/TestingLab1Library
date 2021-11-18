@@ -14,8 +14,15 @@ namespace TestingLab1Library
         int height;
         public Rectangle(int height, int width)
         {
-            this.width = width;
-            this.height = height;
+            if (height > 0 && width > 0 && height < Int32.MaxValue && width < Int32.MaxValue)
+            {
+                this.width = width;
+                this.height = height;
+            }
+            else
+            {
+                throw new Exception("Невозможный прямоугольник");
+            }
         }
         public override string getName()
         {
@@ -41,7 +48,14 @@ namespace TestingLab1Library
         }
         public EquilateralTriangle(int length)
         {
-            this.length = length;
+            if (length > 0 && length < Int32.MaxValue)
+            {
+                this.length = length;
+            }
+            else
+            {
+                throw new Exception("Невозможный треугольник");
+            }
         }
         public override double Surface()
         {
@@ -59,7 +73,14 @@ namespace TestingLab1Library
         int radius;
         public Circle(int radius)
         {
-            this.radius = radius;
+            if (radius > 0 && radius < Int32.MaxValue)
+            {
+                this.radius = radius;
+            }
+            else
+            {
+                throw new Exception("Невозможный круг");
+            }
         }
         public override string getName()
         {
@@ -77,3 +98,4 @@ namespace TestingLab1Library
         }
     }
 }
+

@@ -11,6 +11,7 @@ namespace TestingLab1Library
     class FigureTest
     {
         Rectangle myRect = new Rectangle(7, 10);
+        //Rectangle myNullRect = new Rectangle(-1, -1);
         EquilateralTriangle myTriangle = new EquilateralTriangle(6);
         Circle myCircle = new Circle(4);
         Circle myCircle2 = new Circle(5);
@@ -29,7 +30,11 @@ namespace TestingLab1Library
         {
             Assert.IsFalse(120 < myRect.Perimeter() + myRect.Surface()); //not valid
         }
-
+        [Test]
+        public void RectangleTestNo_4()
+        {
+            Assert.Throws<Exception>(() => new Rectangle(-1, -1)); //not valid
+        }
         [Test]
         public void TriangleTestNo_1()
         {
@@ -54,6 +59,11 @@ namespace TestingLab1Library
         public void TriangleTestNo_5()
         {
             Assert.AreEqual(15.588457268119894, myTriangle.Surface());
+        }
+        [Test]
+        public void TriangleTestNo_6()
+        {
+            Assert.Throws<Exception>(() => new EquilateralTriangle(-1)); //not valid
         }
 
         [Test]
@@ -80,6 +90,11 @@ namespace TestingLab1Library
         public void CircleTestNo_5()
         {
             Assert.AreEqual(25.132741228718345, myCircle.Perimeter());
+        }
+        [Test]
+        public void CircleTestNo_6()
+        {
+            Assert.Throws<Exception>(() => new Circle(-1)); //not valid
         }
     }
 }
